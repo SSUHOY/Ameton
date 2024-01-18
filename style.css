@@ -217,6 +217,17 @@ a {
   margin-right: 24px;
   padding: 16px;
   display: flex;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+.question-item:hover {
+  box-shadow: 0px 0px 70px 0px rgba(0, 0, 0, 0.08);
+  transition: all 0.1s;
+  transform: scale(1.02);
+  .question-title {
+    text-decoration: underline;
+  }
 }
 
 .question-title {
