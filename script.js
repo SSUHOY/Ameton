@@ -28,3 +28,13 @@ prevBtn.addEventListener("click", () => {
     nextBtn.style.display = "block";
   }
 });
+
+function adjustElementStyle() {
+  const screenWidth = window.innerWidth;
+  const element = document.querySelector(".question__items-box");
+  if (screenWidth >= 375 && screenWidth < 768) {
+    element.style.transform = "translateX(0px)";
+  }
+}
+
+window.addEventListener("resize", adjustElementStyle);
