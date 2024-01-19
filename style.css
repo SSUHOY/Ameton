@@ -141,17 +141,17 @@ a {
   padding-bottom: 16px;
 }
 
-.social__title-follow {
+.social-title__follow {
   font-size: 40px;
   font-weight: 600;
 }
 
-.social__icons-box {
+.social-icons__box {
   display: flex;
   align-items: center;
 }
 
-.social__item-icon {
+.social-item__icon {
   width: 56px;
   height: 56px;
   background-color: #f9f9f9;
@@ -172,7 +172,7 @@ a {
   padding-bottom: 32px;
 }
 
-.question__items-box {
+.question-items__box {
   display: flex;
   position: relative;
   transition: all 0.4s ease 0.05s;
@@ -217,6 +217,17 @@ a {
   margin-right: 24px;
   padding: 16px;
   display: flex;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+.question-item:hover {
+  box-shadow: 0px 0px 70px 0px rgba(0, 0, 0, 0.08);
+  transition: all 0.1s;
+  transform: scale(1.02);
+  .question-title {
+    text-decoration: none;
+  }
 }
 
 .question-title {
@@ -228,7 +239,7 @@ a {
   color: #949494;
 }
 .reference__box {
-  width: 996px;
+  width: 100%;
 }
 .reference__container {
   display: flex;
@@ -272,7 +283,75 @@ a {
   box-shadow: 0px 5px 150px 0px rgba(0, 0, 0, 0.08);
 }
 
+/* Delivery page styles */
+.delivery-page__content {
+  width: 690px;
+  height: 420px;
+  text-align: left;
+  padding-top: 12px;
+}
+.title-box {
+  display: flex;
+  padding-bottom: 16px;
+}
+.delivery-page__title {
+  font-size: 24px;
+  font-weight: 700;
+  padding-right: 12px;
+}
+.delivery-page__text {
+  font-size: 15px;
+}
+
+.delivery-page__footnote {
+  font-size: 13px;
+  font-weight: 600;
+  padding-bottom: 16px;
+}
+.online-chat-btn {
+  width: 224px;
+  height: 48px;
+  padding: 15px, 57px, 15px, 56px;
+  background-color: #36ba5f;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  margin-right: 8px;
+}
+
+.support-img__phone {
+  position: absolute;
+  bottom: 12px;
+}
+
+.support-box {
+  box-sizing: border-box;
+}
+
+.call-btn {
+  width: 15.5px;
+}
+.to-call-btn {
+  padding-bottom: 3px;
+}
+
+.to-email-btn,
+.to-call-btn {
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 12px;
+  margin-right: 8px;
+  background-color: #f9f9f9;
+}
+
 /* Responsive Media Queries */
+
+@media (max-width: 320px) {
+  .main__title {
+    font-size: 12px;
+  }
+}
 
 @media screen and (max-width: 590px) {
   .main__header,
@@ -309,7 +388,7 @@ a {
     width: 0;
     height: 0;
   }
-  .social__item-icon {
+  .social-item__icon {
     width: 41px;
   }
 }
@@ -405,18 +484,18 @@ a {
   .social__title {
     text-align: center;
   }
-  .social__title-follow {
+  .social-title__follow {
     font-size: 20px;
     text-align: center;
   }
-  .social__item-icon {
+  .social-item__icon {
     background-color: transparent;
   }
   .questions__title {
     font-size: 24px;
     margin-bottom: 28px;
   }
-  .question__items-box {
+  .question-items__box {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -433,7 +512,7 @@ a {
     font-size: 16px;
   }
   .question-text,
-  .reference__item-title {
+  .reference-item__title {
     font-size: 14px;
   }
   .reference__title {
@@ -451,6 +530,73 @@ a {
     overflow: inherit;
     justify-content: center;
     box-shadow: none;
+  }
+  .delivery-page__content {
+    padding: 22px;
+    width: 424px;
+    height: auto;
+    text-align: justify;
+  }
+  .title-box {
+    display: flex;
+    justify-content: center;
+  }
+  .support-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 424px;
+  }
+  .delivery-page__footnote {
+    padding-bottom: 18px;
+  }
+  .online-chat-btn {
+    margin-bottom: 12px;
+  }
+  .to-call-btn,
+  .to-email-btn {
+    margin-bottom: 12px;
+    width: 224px;
+    height: 48px;
+    padding-bottom: 0px;
+  }
+  .call-btn {
+    width: 15.5px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .main__header {
+    border-radius: 0;
+    margin-top: 0;
+  }
+  .social__box {
+    width: 826px;
+    height: 148px;
+  }
+  .social-title__follow,
+  .questions__title,
+  .reference__title {
+    font-size: 22px;
+    margin-bottom: 12px;
+  }
+
+  .social-item__icon {
+    width: 43px;
+    height: 43px;
+  }
+  .carousel {
+    box-shadow: none;
+    justify-content: center;
+  }
+  .question-items__box {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .question-item {
+    margin-right: 0;
   }
 }
 
