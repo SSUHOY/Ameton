@@ -1,4 +1,4 @@
-const carousel = document.querySelector(".question__items-box");
+const carousel = document.querySelector(".question-items__box");
 const carouselItems = document.querySelectorAll(".question-item");
 const prevBtn = document.querySelector(".slider-prev");
 const nextBtn = document.querySelector(".slider-next");
@@ -31,7 +31,7 @@ prevBtn.addEventListener("click", () => {
 
 function adjustElementStyle() {
   const screenWidth = window.innerWidth;
-  const element = document.querySelector(".question__items-box");
+  const element = document.querySelector(".question-items__box");
   if (screenWidth >= 375 && screenWidth < 768) {
     element.style.transform = "translateX(0px)";
   }
